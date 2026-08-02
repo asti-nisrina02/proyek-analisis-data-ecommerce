@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Streamlit
+.streamlit/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Dataset mentah berukuran besar (opsional, uncomment kalau nggak mau di-push)
+# data/geolocation_dataset.csv
+# data/order_reviews_dataset.csv
