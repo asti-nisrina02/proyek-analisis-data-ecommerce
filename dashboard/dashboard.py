@@ -3,8 +3,16 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 from babel.numbers import format_currency
+import os
 
 sns.set(style='dark')
+
+# Path CSV dibuat relatif ke lokasi file dashboard.py ini sendiri, bukan ke
+# working directory saat app dijalankan. Ini penting karena Streamlit Cloud
+# menjalankan app dari root repo, bukan dari folder dashboard/, sehingga
+# "all_data.csv" saja (tanpa path) tidak akan ketemu.
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+CSV_PATH = os.path.join(CURRENT_DIR, "all_data.csv")
 
 
 # ============================================================
@@ -72,7 +80,7 @@ def create_rfm_df(df):
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("all_data.csv")
+    df = pd.read_csv(CSV_PATH)
     datetime_columns = ["order_approved_at", "order_delivered_carrier_date"]
     df.sort_values(by="order_approved_at", inplace=True)
     df.reset_index(inplace=True, drop=True)
