@@ -1,5 +1,9 @@
 # ✨ E-Commerce Data Analysis & Dashboard
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pxlap3hvzncc6ywyt3qvxf.streamlit.app/)
+
+🔗 **[Live Demo](https://pxlap3hvzncc6ywyt3qvxf.streamlit.app/)**
+
 Proyek analisis data end-to-end menggunakan **Brazilian E-Commerce Public Dataset (Olist)**, mulai dari data wrangling, exploratory data analysis (EDA), hingga dashboard interaktif berbasis Streamlit. Dibuat sebagai submission final untuk kelas *"Belajar Analisis Data dengan Python"* di Dicoding.
 
 ## 📊 Business Questions
